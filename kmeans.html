@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Custom styles for this template -->
+  <link href="algorithms.css" rel="stylesheet">
+  <title>Machine Learning</title>
+
+</head>
+
+<body>
+  <div class="content">
+    <br><br>
+
+    <div align="center" class="opener">
+      <h1>k-Means-Algorithmus</h1>
+    </div>
+
+    <div align="center">
+      <div id="clusterText">
+        <p align="left" id="redValue"><strong>Rotes Cluster</strong>&emsp;&emsp;</p>
+        <p align="left" id="blueValue"><strong>Blaues Cluster</strong>&emsp;&emsp;</p>
+        <p align="left" id="greenValue"><strong>Grünes Cluster</strong>&emsp;&emsp;</p>
+      </div>
+      <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph" id="graph" aria-labelledby="title" role="img">
+        <title id="title">K-Means live</title>
+        <g class="grid x-grid" id="xGrid">
+          <line x1="100" x2="100" y1="0" y2="500"></line>
+        </g>
+        <g class="grid y-grid" id="yGrid">
+          <line x1="100" x2="630" y1="500" y2="500"></line>
+        </g>
+        <g class="labels x-labels">
+          <text x="100" y="520">0</text>
+          <text x="225" y="520">10</text>
+          <text x="350" y="520">20</text>
+          <text x="475" y="520">30</text>
+          <text x="600" y="520">40</text>
+        </g>
+        <g class="labels y-labels">
+          <text x="80" y="15">40</text>
+          <text x="80" y="131">30</text>
+          <text x="80" y="248">20</text>
+          <text x="80" y="373">10</text>
+        </g>
+        <g class="data" data-setname="K Means Example Data Set"></g>
+      </svg>
+      <br>
+      <button class="btn btn-danger btn-sm" id="assignmentBtn" onclick="dataAssignment(points, allClusters, redCluster, blueCluster, greenCluster)"><strong>Datenverteilung</strong></button>
+      <button class="btn btn-info btn-sm" id="updateBtn" onclick="updateCentroid(clusters, clusterColor, allClusters, colors)"><strong>Schwerpunkt-Aktualisierung</strong></button>
+      <br><br><br>
+      <h6><strong>Anleitung: klicke zuerst auf "Datenverteilung", um die einzelnen Datenpunkte neu zu verteilen. Anschließend klicke auf "Schwerpunkt-Aktualisierung", um die neuen Mittelwerte pro Cluster zu erhalten. Aktualisiere die Seite, um ein neues Datenset zu erhalten.</strong></h6>
+      <h6>Die obige Abbildung zeigt einen k-Means Algorithmus mit K = 3 für ein Datenset mit 500 zufällig platzierten Punkten</h6>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+  <script src="kmeans.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
